@@ -1,0 +1,68 @@
+﻿@model Ticket
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" placeholder="xxxxxxx" asp-for="Fincode">
+        <label asp-for="Fincode">Fincode</label>
+        <span class="text-danger-small text-danger" asp-validation-for="Fincode"></span>
+    </div>
+    <div class="form-floating mb-3">
+		<input type="text" class="form-control" placeholder="000" asp-for="Phone">
+        <label asp-for="Phone">Phone</label>
+        <span class="text-danger-small text-danger" asp-validation-for="Phone"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Name" placeholder="Name">
+        <label asp-for="Name">Name</label>
+        <span class="text-danger-small text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Surname" placeholder="Surname">
+        <label asp-for="Surname">Surname</label>
+        <span class="text-danger-small text-danger" asp-validation-for="Surname"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="date" class="form-control" asp-for="DepartureDate">
+        <label asp-for="DepartureDate">Departure date</label>
+        <span class="text-danger-small text-danger" asp-validation-for="DepartureDate"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="date" class="form-control" asp-for="ReturnDate">
+        <label asp-for="ReturnDate">Return date</label>
+        <span class="text-danger-small text-danger" asp-validation-for="ReturnDate"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <select class="form-select" asp-for="DepartingCity">
+            <option selected disabled>From</option>
+            <option value="Baku">Baku</option>
+            <option value="Nakhchivan">Nakhchivan</option>
+            <option value="Istanbul">Istanbul</option>
+            <option value="Antalya">Antalya</option>
+            <option value="Moscow">Moscow</option>
+            <option value="Dubai">Dubai</option>
+        </select>
+        <label asp-for="DepartingCity">Departing city</label>
+        <span class="text-danger-small text-danger" asp-validation-for="DepartingCity"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <select class="form-select" asp-for="DestinationCity">
+            <option selected disabled>To</option>
+            <option value="Baku">Baku</option>
+            <option value="Nakhchivan">Nakhchivan</option>
+            <option value="Istanbul">Istanbul</option>
+            <option value="Antalya">Antalya</option>
+            <option value="Moscow">Moscow</option>
+            <option value="Dubai">Dubai</option>
+        </select>
+        <label asp-for="DestinationCity">Destination city</label>
+        <span class="text-danger-small text-danger" asp-validation-for="DestinationCity"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <select class="form-select" asp-for="Airline">
+            <option selected value="Azal">Azal</option>
+            <option value="Turkish Airlines">Turkish Airlines</option>
+        </select>
+        <label asp-for="Airline">Airline</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
